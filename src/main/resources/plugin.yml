@@ -1,0 +1,6 @@
+name: SkyMineCore
+version: '1.0'
+main: io.github.lianjordaan.skyMineCore.SkyMineCore
+api-version: '1.21'
+authors: [ Lian ]
+website: https://lianjordaan.co.za/
