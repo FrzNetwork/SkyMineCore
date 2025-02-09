@@ -17,10 +17,10 @@ public class PlayerLeaveListener implements Listener {
     }
 
     @EventHandler
-    public void onPlayerJoin(PlayerQuitEvent event) {
+    public void onPlayerLeave(PlayerQuitEvent event) {
         UUID uuid = event.getPlayer().getUniqueId();
 
         userDataManager.loadOrUpdateUserData(uuid);
-        userDataManager.setUserData(uuid, "last-leave", System.currentTimeMillis());
+        userDataManager.setUserData(uuid, "last-logout", System.currentTimeMillis());
     }
 }

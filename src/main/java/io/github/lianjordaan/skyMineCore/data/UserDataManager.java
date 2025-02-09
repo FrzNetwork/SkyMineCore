@@ -76,7 +76,7 @@ public class UserDataManager {
         setIfMissing(config, "last-join", System.currentTimeMillis());
 
         // logout timestamp
-        setIfMissing(config, "logout", 0);
+        setIfMissing(config, "last-logout", 0);
 
         // blocks mined
         setIfMissing(config, "blocks-mined", 0);

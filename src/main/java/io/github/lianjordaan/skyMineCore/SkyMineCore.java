@@ -2,6 +2,7 @@ package io.github.lianjordaan.skyMineCore;
 
 import io.github.lianjordaan.skyMineCore.data.UserDataManager;
 import io.github.lianjordaan.skyMineCore.listeners.PlayerJoinListener;
+import io.github.lianjordaan.skyMineCore.listeners.PlayerLeaveListener;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -12,8 +13,9 @@ public final class SkyMineCore extends JavaPlugin {
     public void onEnable() {
         this.userDataManager = new UserDataManager(this);
 
-        // Example usage
+        // register events
         Bukkit.getPluginManager().registerEvents(new PlayerJoinListener(this), this);
+        Bukkit.getPluginManager().registerEvents(new PlayerLeaveListener(this), this);
     }
 
     public UserDataManager getUserDataManager() {
