@@ -8,10 +8,12 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class SkyMineCore extends JavaPlugin {
     private UserDataManager userDataManager;
+    private UserEvents userEvents;
 
     @Override
     public void onEnable() {
         this.userDataManager = new UserDataManager(this);
+        this.userEvents = new UserEvents(this);
 
         // register events
         Bukkit.getPluginManager().registerEvents(new PlayerJoinListener(this), this);
